@@ -5,23 +5,28 @@ using UnityEngine;
 
 public class SavableHandler : MonoBehaviour
 {
-    SavableData savableData;
+    PadData savableData;
 
-    public SavableData save()
-    {
-        if (savableData == null) savableData = new SavableData();
+    //public Savable save()
+    //{
+    //    if (savableData == null) savableData = new PadData();
 
-        savableData.active = gameObject.activeSelf;
-        savableData.pos = transform.position;
-        savableData.rot = transform.rotation;
-        return savableData;
-    }
+    //    savableData.active = gameObject.activeSelf;
+    //    savableData.pos = transform.position;
+    //    savableData.rot = transform.rotation;
 
-    public void load(SavableData data)
-    {
-        savableData = data;
-        gameObject.SetActive(data.active);
-        transform.position = data.pos;
-        transform.rotation = data.rot;
-    }
+    //    return savableData;
+    //}
+
+    //public void load(Savable data)
+    //{
+    //    if (data is PadData)
+    //    {
+    //        savableData = (PadData)(data);
+
+    //        gameObject.SetActive(savableData.active);
+    //        transform.position = savableData.pos;
+    //        transform.rotation = savableData.rot;
+    //    }
+    //}
 }

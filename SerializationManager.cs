@@ -25,6 +25,7 @@ public class SerializationManager : MonoBehaviour
     {
         if(!File.Exists(path))
         {
+            Debug.LogWarning("No save data found");
             return null;
         }
         BinaryFormatter formatter = GetBinaryFormatter();
@@ -37,7 +38,7 @@ public class SerializationManager : MonoBehaviour
         }
         catch
         {
-            Debug.LogErrorFormat("Faileed to load file at {0}", path);
+            Debug.LogErrorFormat("Failed to load file at {0}", path);
             file.Close();
             return null; 
         }

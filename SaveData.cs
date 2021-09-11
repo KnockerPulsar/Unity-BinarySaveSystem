@@ -24,6 +24,7 @@ public class SaveData
 
     public PlayerData playerData;
     public List<SavableData> savables;
+    public List<string> IDs;
 }
 
 [System.Serializable]
@@ -32,11 +33,13 @@ public class PlayerData
     public Vector3 pos;
     public Quaternion rot;
 }
-[System.Serializable]
-public class SavableData
-{
-    public string ID;
-    public Vector3 pos;
-    public Quaternion rot;
-    public bool active;
-}
+
+
+//[System.Serializable]
+//public class SavableData : Savable
+//{
+//    public string ID;
+//    public Vector3 pos;
+//    public Quaternion rot;
+//    public bool active;
+//}

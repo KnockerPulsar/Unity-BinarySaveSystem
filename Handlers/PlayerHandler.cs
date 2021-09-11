@@ -17,7 +17,10 @@ public class PlayerHandler : MonoBehaviour
 
     public void load(PlayerData playerData)
     {
-        transform.position = playerData.pos;
-        transform.rotation = playerData.rot;
+        if (playerData != null)
+        {
+            transform.position = playerData.pos;
+            transform.rotation = playerData.rot;
+        }
     }
 }
